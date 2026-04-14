@@ -114,3 +114,13 @@ h2.titre em { font-style: italic; color: var(--or-clair); font-weight: 400; }
 @media (max-width: 900px) {
   .container { padding: 0 24px; }
 }
+
+/* Touch & tap improvements */
+@media (max-width: 768px) {
+  .btn-or, .btn-outline-or, .btn-ghost, .nav-cta {
+    -webkit-tap-highlight-color: transparent;
+    min-height: 48px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  a { -webkit-tap-highlight-color: transparent; }
+}

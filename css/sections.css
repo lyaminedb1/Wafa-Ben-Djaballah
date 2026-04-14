@@ -362,3 +362,78 @@ footer {
   .footer-nav { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+/* ═══════════════════════════════
+   MOBILE — toutes sections
+═══════════════════════════════ */
+@media (max-width: 768px) {
+  /* Expertise */
+  #expertise { padding: 64px 0; }
+  .exp-header { flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .exp-header p { text-align: left; max-width: 100%; }
+  .exp-grid { grid-template-columns: 1fr; gap: 2px; }
+  .exp-card { padding: 36px 24px; }
+  .exp-num { font-size: 56px; }
+
+  /* About */
+  #about { padding: 64px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo { max-width: 100%; }
+  .about-photo-frame { aspect-ratio: 4/3; }
+  .about-photo-badge { right: 0; bottom: -12px; font-size: 10px; padding: 12px 16px; }
+  .about-content h2.titre { margin-top: 24px; }
+  .about-content blockquote { font-size: 17px; padding: 14px 18px; }
+  .about-content .btn-or { width: 100%; text-align: center; display: block; }
+
+  /* Process */
+  #process { padding: 64px 0; }
+  .process-header { margin-bottom: 40px; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-step { padding: 32px 24px; }
+  .process-step-num { font-size: 54px; margin-bottom: 12px; }
+
+  /* Testimonials */
+  #testimonials { padding: 64px 0; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .testi-card { padding: 28px 24px; }
+
+  /* Zones */
+  #zones { padding: 64px 0; }
+  .zones-grid { grid-template-columns: 1fr; gap: 36px; }
+  .zones-list { grid-template-columns: 1fr 1fr; }
+
+  /* CTA Urgence */
+  #cta-urgence { padding: 60px 0; }
+  #cta-urgence h2 { font-size: 30px; }
+  .cta-actions { flex-direction: column; align-items: center; }
+  .cta-actions .btn-or,
+  .cta-actions .btn-outline-or { width: 100%; text-align: center; }
+
+  /* Contact */
+  #contact { padding: 64px 0; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form .btn-or { width: 100%; text-align: center; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr; gap: 36px; padding: 48px 0; }
+  .footer-nav { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-legal { justify-content: center; }
+
+  /* WhatsApp */
+  .wa-float { bottom: 20px; right: 20px; width: 48px; height: 48px; }
+  .wa-float svg { width: 24px; height: 24px; }
+
+  /* Global */
+  .container { padding: 0 20px; }
+  h2.titre { font-size: clamp(30px, 8vw, 42px); }
+  .section-label { font-size: 9px; }
+}
+
+/* Très petit écran */
+@media (max-width: 380px) {
+  .hero-title { font-size: 40px; }
+  .zones-list { grid-template-columns: 1fr; }
+  .footer-nav { grid-template-columns: 1fr; }
+}

@@ -57,11 +57,14 @@ nav.scrolled {
 .nav-burger span { width: 24px; height: 1.5px; background: var(--or-clair); transition: all 0.3s; }
 
 .nav-mobile {
-  display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
-  background: var(--navy-mid); border-bottom: 1px solid var(--border);
+  display: none !important;
+  position: fixed; top: var(--nav-h); left: 0; right: 0;
+  background: rgba(11,17,32,0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
   padding: 24px; z-index: 99; flex-direction: column; gap: 0;
 }
-.nav-mobile.open { display: flex; }
+.nav-mobile.open { display: flex !important; }
 .nav-mobile a {
   font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--gris-mid); padding: 14px 0; border-bottom: 1px solid var(--border);
@@ -203,4 +206,50 @@ nav.scrolled {
   .hero-right { display: none; }
   .hero-stats { grid-template-columns: 1fr 1fr; position: static; }
   .hero-stat:nth-child(3) { display: none; }
+}
+
+/* ═══════════════════════════════
+   MOBILE — nav & hero
+═══════════════════════════════ */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  nav.scrolled { padding: 0 20px; }
+  .nav-links, .nav-cta { display: none !important; }
+  .nav-burger { display: flex !important; }
+  .nav-logo-text { font-size: 15px; }
+
+  .nav-mobile a {
+    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gris-mid); padding: 16px 0; border-bottom: 1px solid var(--border);
+    display: block; transition: color 0.3s;
+  }
+  .nav-mobile a:hover { color: var(--or-clair); }
+  .nav-mobile .btn-or {
+    margin-top: 20px; text-align: center; display: block;
+    padding: 16px; font-size: 12px;
+  }
+
+  #hero {
+    grid-template-columns: 1fr;
+    min-height: 100svh;
+  }
+  .hero-left {
+    padding: calc(var(--nav-h) + 40px) 20px 40px;
+    justify-content: flex-start;
+  }
+  .hero-title { font-size: 48px; line-height: 1.05; }
+  .hero-sub { font-size: 14px; max-width: 100%; }
+  .hero-actions { flex-direction: column; gap: 16px; }
+  .hero-actions .btn-or { width: 100%; text-align: center; padding: 18px; }
+  .hero-actions .btn-ghost { justify-content: center; }
+  .hero-right { display: none; }
+
+  .hero-stats {
+    position: static;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0;
+  }
+  .hero-stat { padding: 20px 16px; }
+  .stat-n { font-size: 28px; }
+  .stat-l { font-size: 9px; }
 }
